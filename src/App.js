@@ -67,7 +67,7 @@ const App = () => {
               </div>
             </div>
             <div className="hero-photo">
-              <img src={`${process.env.PUBLIC_URL}/profile.jpg`} alt="Simant Shrestha portrait" />
+              <img src={`${process.env.PUBLIC_URL}/profile.jpg`} alt="Simant Shrestha portrait" width="600" height="600" fetchPriority="high" />
             </div>
           </div>
         </section>
