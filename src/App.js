@@ -22,7 +22,7 @@ const App = () => {
               </h1>
               <p className="hero-eyebrow">Software Development Engineer</p>
               <p className="hero-subtitle">
-                Building reliable, scalable back-end systems with clean APIs and thoughtful engineering.
+                Backend engineer with a passion for building high-performance microservices and data-driven solutions that solve real problems.
               </p>
               <div className="hero-meta">
                 <span>Eden Prairie, MN</span>
