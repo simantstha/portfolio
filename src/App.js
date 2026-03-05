@@ -17,10 +17,10 @@ const App = () => {
         <section className="hero">
           <div className="hero-inner">
             <div className="hero-content">
-              <p className="hero-eyebrow">Software Development Engineer</p>
               <h1 className="hero-title">
                 Simant <span>Shrestha</span>
               </h1>
+              <p className="hero-eyebrow">Software Development Engineer</p>
               <p className="hero-subtitle">
                 Building reliable, scalable back-end systems with clean APIs and thoughtful engineering.
               </p>
