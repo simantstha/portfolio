@@ -35,7 +35,7 @@ const App = () => {
                 >
                   Get in touch
                 </a>
-                <a className="btn ghost" href={`${process.env.PUBLIC_URL}/resume.pdf`} download>
+                <a className="btn ghost" href="/resume.pdf" download>
                   Download Resume
                 </a>
                 <a
@@ -49,7 +49,7 @@ const App = () => {
               </div>
             </div>
             <div className="hero-photo">
-              <img src={`${process.env.PUBLIC_URL}/profile.jpg`} alt="Simant Shrestha portrait" />
+              <img src="/profile.jpg" alt="Simant Shrestha portrait" />
             </div>
           </div>
         </section>
