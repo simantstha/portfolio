@@ -1,6 +1,24 @@
+import { useEffect } from 'react';
 import './App.css';
 
 const App = () => {
+  useEffect(() => {
+    const targets = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.12 }
+    );
+    targets.forEach((el) => observer.observe(el));
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <div className="app">
       <header className="nav">
@@ -55,7 +73,7 @@ const App = () => {
         </section>
 
         <section id="experience" className="section section-alt">
-          <div className="section-header">
+          <div className="section-header reveal">
             <h2>Work Experience</h2>
             <p>
               Delivering production-ready services across microservices and APIs, with a consistent focus on performance, reliability, scalability, and clear cross-team communication.
@@ -63,7 +81,7 @@ const App = () => {
           </div>
 
           <div className="cards">
-            <article className="card">
+            <article className="card reveal">
               <div className="card-header">
                 <div>
                   <h3>Software Development Engineer 2</h3>
@@ -93,7 +111,7 @@ const App = () => {
               </ul>
             </article>
 
-            <article className="card">
+            <article className="card reveal">
               <div className="card-header">
                 <div>
                   <h3>Software Development Intern</h3>
@@ -123,11 +141,11 @@ const App = () => {
         </section>
 
         <section id="education" className="section">
-          <div className="section-header">
+          <div className="section-header reveal">
             <h2>Education</h2>
           </div>
           <div className="cards">
-            <article className="card compact">
+            <article className="card compact reveal">
               <div className="card-header">
                 <div>
                   <h3>Virginia Tech</h3>
@@ -142,7 +160,7 @@ const App = () => {
               </p>
             </article>
 
-            <article className="card compact">
+            <article className="card compact reveal">
               <div className="card-header">
                 <div>
                   <h3>Vellore Institute of Technology</h3>
@@ -161,13 +179,13 @@ const App = () => {
         </section>
 
         <section id="skills" className="section section-alt">
-          <div className="section-header">
+          <div className="section-header reveal">
             <h2>Skills</h2>
             <p>
               A toolkit focused on building robust services and data-driven solutions.
             </p>
           </div>
-          <div className="skills-grid">
+          <div className="skills-grid reveal">
             <div className="skill-column">
               <h3>Programming Languages</h3>
               <p>Java · Python · PHP</p>
@@ -188,13 +206,13 @@ const App = () => {
         </section>
 
         <section id="contact" className="section section-contact">
-          <div className="section-header">
+          <div className="section-header reveal">
             <h2>Let&apos;s build something.</h2>
             <p>
               I&apos;m open to roles where I can design and ship backend services, APIs, and data-driven features.
             </p>
           </div>
-          <div className="contact-actions">
+          <div className="contact-actions reveal">
             <a
               className="btn primary wide"
               href="mailto:simant.shrestha@mitchell.com"
