@@ -58,7 +58,7 @@ const App = () => {
           <div className="section-header">
             <h2>Work Experience</h2>
             <p>
-              Delivering production-ready services with a focus on performance, reliability, and clear communication.
+              Delivering production-ready services across microservices and APIs, with a consistent focus on performance, reliability, scalability, and clear cross-team communication.
             </p>
           </div>
 
