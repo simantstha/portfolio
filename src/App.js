@@ -20,9 +20,9 @@ const App = () => {
   }, []);
 
   return (
-    <div className="app">
+    <div className="app" id="top">
       <header className="nav">
-        <div className="nav-logo">SS</div>
+        <a className="nav-logo" href="#top">SS</a>
         <nav className="nav-links">
           <a href="#experience">Experience</a>
           <a href="#education">Education</a>
