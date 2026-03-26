@@ -12,8 +12,9 @@
     <!-- No-flash theme init: runs before React, prevents flicker -->
     <script>
       (function () {
-        var stored = localStorage.getItem('theme');
-        var preferred = window.matchMedia('(prefers-color-scheme: dark)').matches
+        var stored;
+        try { stored = localStorage.getItem('theme'); } catch (e) {}
+        var preferred = (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches)
           ? 'dark'
           : 'light';
         document.documentElement.setAttribute('data-theme', stored || preferred);
