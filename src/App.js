@@ -132,7 +132,7 @@ export default function App() {
 
         {/* ── EXPERIENCE ───────────────────────────────── */}
         <section id="experience" className="section">
-          <p className="section-label reveal">// work_experience</p>
+          <p className="section-label reveal">{`// work_experience`}</p>
           <div className="cards">
 
             <article className="card reveal">
@@ -188,7 +188,7 @@ export default function App() {
 
         {/* ── PROJECTS ─────────────────────────────────── */}
         <section id="projects" className="section">
-          <p className="section-label reveal">// projects</p>
+          <p className="section-label reveal">{`// projects`}</p>
           <div className="cards">
 
             <article className="project-card reveal">
@@ -229,7 +229,7 @@ export default function App() {
 
         {/* ── EDUCATION ────────────────────────────────── */}
         <section id="education" className="section">
-          <p className="section-label reveal">// education</p>
+          <p className="section-label reveal">{`// education`}</p>
           <div className="cards">
 
             <article className="card reveal">
@@ -264,7 +264,7 @@ export default function App() {
 
         {/* ── SKILLS ───────────────────────────────────── */}
         <section id="skills" className="section">
-          <p className="section-label reveal">// skills</p>
+          <p className="section-label reveal">{`// skills`}</p>
           <div className="skills-grid reveal">
 
             <div className="skill-group">
