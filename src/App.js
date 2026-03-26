@@ -3,8 +3,10 @@ import './App.css';
 
 /* ── Theme helpers ────────────────────────────────────────── */
 function getInitialTheme() {
-  const attrTheme = document.documentElement.getAttribute('data-theme');
-  if (attrTheme === 'dark' || attrTheme === 'light') return attrTheme;
+  try {
+    const attrTheme = document.documentElement.getAttribute('data-theme');
+    if (attrTheme === 'dark' || attrTheme === 'light') return attrTheme;
+  } catch (e) { /* SSR or DOM unavailable */ }
   try {
     const stored = localStorage.getItem('theme');
     if (stored === 'dark' || stored === 'light') return stored;
@@ -29,12 +31,7 @@ export default function App() {
   }, [theme]);
 
   function toggleTheme() {
-    setTheme(t => {
-      const next = t === 'dark' ? 'light' : 'dark';
-      document.documentElement.setAttribute('data-theme', next);
-      try { localStorage.setItem('theme', next); } catch (e) { /* private browsing */ }
-      return next;
-    });
+    setTheme(t => t === 'dark' ? 'light' : 'dark');
   }
 
   /* Scroll reveal */
